@@ -8,7 +8,7 @@ const Education = () => {
       degree: "B.Tech – Artificial Intelligence & Machine Learning",
       institution: "Universal College of Engineering and Technology",
       period: "2021 – 2025",
-      grade: "CGPA: 7.0",
+      grade: "CGPA: 7.16",
       status: "completed"
     },
     {
@@ -22,7 +22,7 @@ const Education = () => {
       degree: "SSC",
       institution: "Swami School",
       period: "2018 – 2019",
-      grade: "88%",
+      grade: "CGPA: 8.7",
       status: "completed"
     }
   ];
