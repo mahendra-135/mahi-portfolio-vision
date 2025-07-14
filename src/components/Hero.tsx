@@ -82,7 +82,7 @@ const Hero = () => {
                 <span className="text-sm font-medium text-primary">AI/ML</span>
               </div>
               <div className="absolute -bottom-4 -left-4 glass-card px-4 py-2 rounded-full animate-float" style={{animationDelay: '1.5s'}}>
-                <span className="text-sm font-medium text-accent">Python</span>
+                <span className="text-sm font-medium text-accent">PYTHON</span>
               </div>
             </div>
           </div>
