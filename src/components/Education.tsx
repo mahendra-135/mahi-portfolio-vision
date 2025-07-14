@@ -9,7 +9,7 @@ const Education = () => {
       institution: "Universal College of Engineering and Technology",
       period: "2021 – 2025",
       grade: "CGPA: 7.0",
-      status: "current"
+      status: "completed"
     },
     {
       degree: "Intermediate",
