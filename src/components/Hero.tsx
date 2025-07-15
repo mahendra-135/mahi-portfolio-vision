@@ -48,7 +48,7 @@ const Hero = () => {
                 size="xl"
                 onClick={() => {
                   // Check if file exists, if not show alert
-                  fetch('/Mahendra_Reddy_Resume.pdf')
+                  fetch('file:///C:/Users/Avinash%20Reddy/Downloads/mahi_png.pdf')
                     .then(response => {
                       if (response.ok) {
                         const link = document.createElement('a');
