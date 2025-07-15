@@ -47,10 +47,21 @@ const Hero = () => {
                 variant="glass" 
                 size="xl"
                 onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/resume.pdf';
-                  link.download = 'Mahendra_Reddy_Resume.pdf';
-                  link.click();
+                  // Check if file exists, if not show alert
+                  fetch('/Mahendra_Reddy_Resume.pdf')
+                    .then(response => {
+                      if (response.ok) {
+                        const link = document.createElement('a');
+                        link.href = '/Mahendra_Reddy_Resume.pdf';
+                        link.download = 'Mahendra_Reddy_Resume.pdf';
+                        link.click();
+                      } else {
+                        alert('Resume file not found. Please contact me directly for my resume.');
+                      }
+                    })
+                    .catch(() => {
+                      alert('Resume file not found. Please contact me directly for my resume.');
+                    });
                 }}
               >
                 <Download className="w-5 h-5" />
