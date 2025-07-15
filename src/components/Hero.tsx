@@ -33,17 +33,35 @@ const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="xl" className="group">
+              <Button 
+                variant="hero" 
+                size="xl" 
+                className="group"
+                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <ExternalLink className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 View Projects
               </Button>
               
-              <Button variant="glass" size="xl">
+              <Button 
+                variant="glass" 
+                size="xl"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/resume.pdf';
+                  link.download = 'Mahendra_Reddy_Resume.pdf';
+                  link.click();
+                }}
+              >
                 <Download className="w-5 h-5" />
                 Download Resume
               </Button>
               
-              <Button variant="outline" size="xl">
+              <Button 
+                variant="outline" 
+                size="xl"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <Mail className="w-5 h-5" />
                 Contact Me
               </Button>
