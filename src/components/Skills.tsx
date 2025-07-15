@@ -39,6 +39,18 @@ const Skills = () => {
       issuer: "BE10X",
       category: "AI Tools",
       status: "Certified"
+    },
+    {
+      title: "AI for Beginners",
+      issuer: "HP LIFE",
+      category: "AI/ML",
+      status: "Certified"
+    },
+    {
+      title: "Data Science & Analytics",
+      issuer: "HP LIFE",
+      category: "Data Analytics",
+      status: "Certified"
     }
   ];
 

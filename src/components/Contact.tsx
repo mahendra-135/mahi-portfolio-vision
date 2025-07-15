@@ -22,8 +22,8 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "mahi-mandi-reddy",
-      href: "https://linkedin.com/in/mahi-mandi-reddy-0569a7276"
+      value: "mandireddy-mahendra-reddy",
+      href: "https://www.linkedin.com/in/mandireddy-mahendra-reddy"
     }
   ];
 
