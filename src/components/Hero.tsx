@@ -47,11 +47,25 @@ const Hero = () => {
                 variant="glass" 
                 size="xl"
                 onClick={() => {
-                  window.open('mailto:mahimandireddy@gmail.com?subject=Resume Request&body=Hi Mahendra, I would like to request your resume. Thank you!', '_blank');
+                  // Check if file exists, if not show alert
+                  fetch('/Mahendra_Reddy_Resume.pdf')
+                    .then(response => {
+                      if (response.ok) {
+                        const link = document.createElement('a');
+                        link.href = '/Mahendra_Reddy_Resume.pdf';
+                        link.download = 'Mahendra_Reddy_Resume.pdf';
+                        link.click();
+                      } else {
+                        alert('Resume file not found. Please upload your resume to the public folder.');
+                      }
+                    })
+                    .catch(() => {
+                      alert('Resume file not found. Please upload your resume to the public folder.');
+                    });
                 }}
               >
                 <Download className="w-5 h-5" />
-                Request Resume
+                Download Resume
               </Button>
               
               <Button 
