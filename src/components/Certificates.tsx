@@ -45,50 +45,22 @@ const Certificates = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certificates.map((cert, index) => (
             <Card 
               key={cert.id} 
-              className="glass-card hover:shadow-large transition-all duration-300 hover:scale-105 group animate-fade-in"
+              className="glass-card hover:shadow-large transition-all duration-300 hover:scale-105 animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="p-6">
-                <div className="space-y-4">
-                  {/* Certificate Image */}
-                  <div className="relative overflow-hidden rounded-lg">
-                    <img 
-                      src={cert.image} 
-                      alt={cert.title}
-                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-
-                  {/* Certificate Details */}
-                  <div className="space-y-3">
-                    <div className="flex items-start justify-between gap-2">
-                      <h3 className="font-bold text-lg leading-tight group-hover:text-primary transition-colors">
-                        {cert.title}
-                      </h3>
-                      <Badge variant="secondary" className="shrink-0">
-                        {cert.category}
-                      </Badge>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <p className="text-primary font-semibold">{cert.issuer}</p>
-                      <p className="text-sm text-muted-foreground">{cert.date}</p>
-                      {cert.certificateCode && (
-                        <p className="text-xs text-muted-foreground">
-                          Certificate Code: {cert.certificateCode}
-                        </p>
-                      )}
-                    </div>
-                    
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {cert.description}
-                    </p>
-                  </div>
+              <CardContent className="p-6 text-center">
+                <div className="space-y-3">
+                  <h3 className="font-bold text-lg text-primary">
+                    {cert.title}
+                  </h3>
+                  <p className="text-muted-foreground font-medium">{cert.issuer}</p>
+                  <Badge variant="secondary" className="mx-auto">
+                    {cert.category}
+                  </Badge>
                 </div>
               </CardContent>
             </Card>
