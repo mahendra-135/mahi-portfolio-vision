@@ -46,23 +46,7 @@ const Hero = () => {
               <Button 
                 variant="glass" 
                 size="xl"
-                onClick={() => {
-                  // Check if file exists, if not show alert
-                  fetch('file:///C:/Users/Avinash%20Reddy/Downloads/mahi_png.pdf')
-                    .then(response => {
-                      if (response.ok) {
-                        const link = document.createElement('a');
-                        link.href = '/Mahendra_Reddy_Resume.pdf';
-                        link.download = 'Mahendra_Reddy_Resume.pdf';
-                        link.click();
-                      } else {
-                        alert('Resume file not found. Please upload your resume to the public folder.');
-                      }
-                    })
-                    .catch(() => {
-                      alert('Resume file not found. Please upload your resume to the public folder.');
-                    });
-                }}
+                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1oW23oNVWDapJ0-pqZYzOKdYX3JCcvRt-', '_blank')}
               >
                 <Download className="w-5 h-5" />
                 Download Resume
