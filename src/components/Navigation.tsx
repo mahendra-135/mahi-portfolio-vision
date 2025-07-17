@@ -58,7 +58,11 @@ const Navigation = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="gradient" size="sm">
+            <Button 
+              variant="gradient" 
+              size="sm"
+              onClick={() => window.open('https://drive.google.com/file/d/1oW23oNVWDapJ0-pqZYzOKdYX3JCcvRt-/view?usp=sharing', '_blank')}
+            >
               <Download className="w-4 h-4" />
               Resume
             </Button>
@@ -89,7 +93,12 @@ const Navigation = () => {
                 </button>
               ))}
               <div className="pt-4 border-t border-border/50">
-                <Button variant="gradient" size="sm" className="w-full">
+                <Button 
+                  variant="gradient" 
+                  size="sm" 
+                  className="w-full"
+                  onClick={() => window.open('https://drive.google.com/file/d/1oW23oNVWDapJ0-pqZYzOKdYX3JCcvRt-/view?usp=sharing', '_blank')}
+                >
                   <Download className="w-4 h-4" />
                   Download Resume
                 </Button>
