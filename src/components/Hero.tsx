@@ -46,7 +46,10 @@ const Hero = () => {
               <Button 
                 variant="glass" 
                 size="xl"
-                onClick={() => window.open('https://drive.google.com/uc?export=download&id=1oW23oNVWDapJ0-pqZYzOKdYX3JCcvRt-', '_blank')}
+                onClick={() => {
+                  const resumeUrl = 'https://drive.google.com/uc?export=download&id=1oW23oNVWDapJ0-pqZYzOKdYX3JCcvRt-';
+                  window.open(resumeUrl, '_blank');
+                }}
               >
                 <Download className="w-5 h-5" />
                 Download Resume
