@@ -80,13 +80,28 @@ const Hero = () => {
 
             {/* Social Links */}
             <div className="flex gap-4 pt-4">
-              <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="rounded-full hover:scale-110 transition-transform"
+                onClick={() => window.open('https://github.com/mahendra-135', '_blank')}
+              >
                 <Github className="w-5 h-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="rounded-full hover:scale-110 transition-transform"
+                onClick={() => window.open('https://www.linkedin.com/in/mandireddy-mahendra-reddy', '_blank')}
+              >
                 <Linkedin className="w-5 h-5" />
               </Button>
-              <Button variant="ghost" size="icon" className="rounded-full hover:scale-110 transition-transform">
+              <Button 
+                variant="ghost" 
+                size="icon" 
+                className="rounded-full hover:scale-110 transition-transform"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              >
                 <Mail className="w-5 h-5" />
               </Button>
             </div>
