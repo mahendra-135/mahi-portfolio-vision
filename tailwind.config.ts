@@ -87,7 +87,10 @@ export default {
 				'gradient-secondary': 'var(--gradient-secondary)',
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-card': 'var(--gradient-card)',
-				'gradient-accent': 'var(--gradient-accent)'
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-rainbow': 'var(--gradient-rainbow)',
+				'gradient-electric': 'var(--gradient-electric)',
+				'gradient-fire': 'var(--gradient-fire)'
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
@@ -95,12 +98,15 @@ export default {
 				'large': 'var(--shadow-large)',
 				'glow': 'var(--shadow-glow)',
 				'accent-glow': 'var(--shadow-accent-glow)',
-				'colorful': 'var(--shadow-colorful)'
+				'colorful': 'var(--shadow-colorful)',
+				'rainbow': 'var(--shadow-rainbow)',
+				'electric': 'var(--shadow-electric)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
 				'bounce': 'var(--transition-bounce)',
-				'spring': 'var(--transition-spring)'
+				'spring': 'var(--transition-spring)',
+				'elastic': 'var(--transition-elastic)'
 			},
 			keyframes: {
 				'accordion-down': {
