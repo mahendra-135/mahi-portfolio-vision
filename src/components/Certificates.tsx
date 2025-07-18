@@ -45,27 +45,29 @@ const Certificates = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certificates.map((cert, index) => (
-            <Card 
-              key={cert.id} 
-              className="glass-card hover:shadow-large transition-all duration-300 hover:scale-105 animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardContent className="p-6 text-center">
-                <div className="space-y-3">
-                  <h3 className="font-bold text-lg text-primary">
-                    {cert.title}
-                  </h3>
-                  <p className="text-muted-foreground font-medium">{cert.issuer}</p>
-                  <Badge variant="secondary" className="mx-auto">
+        <Card className="glass-card max-w-4xl mx-auto">
+          <CardContent className="p-8">
+            <div className="space-y-6">
+              {certificates.map((cert, index) => (
+                <div 
+                  key={cert.id}
+                  className="flex flex-col md:flex-row md:items-center justify-between p-4 rounded-lg bg-secondary/20 hover:bg-secondary/30 transition-colors animate-fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="space-y-2 md:space-y-1">
+                    <h3 className="font-bold text-lg text-primary">
+                      {cert.title}
+                    </h3>
+                    <p className="text-muted-foreground font-medium">{cert.issuer}</p>
+                  </div>
+                  <Badge variant="secondary" className="mt-2 md:mt-0 self-start md:self-center">
                     {cert.category}
                   </Badge>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Achievement Stats */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
