@@ -97,24 +97,38 @@ const Hero = () => {
 
           {/* Profile Image */}
           <div className="flex-shrink-0 animate-scale-in" style={{animationDelay: '0.3s'}}>
-            <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-large">
+            <div className="relative group">
+              {/* Animated border rings */}
+              <div className="absolute -inset-4 bg-gradient-primary rounded-full opacity-75 group-hover:opacity-100 animate-pulse blur-sm"></div>
+              <div className="absolute -inset-2 bg-gradient-primary rounded-full opacity-50 animate-spin-slow"></div>
+              
+              {/* Main profile image */}
+              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-glow border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-500">
                 <img 
                   src={profileImage} 
                   alt="Mahendra Reddy Mandireddy"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-700"
                 />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               
-              {/* Glow effect */}
-              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 blur-xl scale-110"></div>
+              {/* Multiple glow effects */}
+              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-20 blur-xl scale-110 animate-pulse"></div>
+              <div className="absolute inset-0 rounded-full bg-accent/30 blur-2xl scale-125 animate-float"></div>
               
-              {/* Floating skills tags */}
-              <div className="absolute -top-4 -right-4 glass-card px-4 py-2 rounded-full animate-float">
-                <span className="text-sm font-medium text-primary">AI/ML</span>
+              {/* Enhanced floating skills tags */}
+              <div className="absolute -top-6 -right-6 glass-card px-6 py-3 rounded-full animate-float shadow-glow group-hover:shadow-large transition-all duration-300">
+                <span className="text-sm font-bold text-primary bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">AI/ML</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 glass-card px-4 py-2 rounded-full animate-float" style={{animationDelay: '1.5s'}}>
-                <span className="text-sm font-medium text-accent">PYTHON</span>
+              <div className="absolute -bottom-6 -left-6 glass-card px-6 py-3 rounded-full animate-float shadow-glow group-hover:shadow-large transition-all duration-300" style={{animationDelay: '1.5s'}}>
+                <span className="text-sm font-bold text-accent bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">PYTHON</span>
+              </div>
+              <div className="absolute top-1/2 -left-8 glass-card px-4 py-2 rounded-full animate-float shadow-medium group-hover:shadow-glow transition-all duration-300" style={{animationDelay: '2.5s'}}>
+                <span className="text-xs font-medium text-foreground">DATA</span>
+              </div>
+              <div className="absolute top-1/4 -right-8 glass-card px-4 py-2 rounded-full animate-float shadow-medium group-hover:shadow-glow transition-all duration-300" style={{animationDelay: '3s'}}>
+                <span className="text-xs font-medium text-foreground">CODE</span>
               </div>
             </div>
           </div>
