@@ -98,6 +98,16 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="flex-shrink-0 animate-scale-in" style={{animationDelay: '0.3s'}}>
             <div className="relative group">
+              {/* Rotating neon ring */}
+              <div className="absolute -inset-6 rounded-full animate-spin-slow">
+                <div className="w-full h-full rounded-full border-4 border-transparent bg-gradient-to-r from-foreground via-transparent to-foreground bg-clip-border shadow-glow opacity-60"></div>
+              </div>
+              
+              {/* Second rotating ring for enhanced effect */}
+              <div className="absolute -inset-4 rounded-full animate-spin-slow" style={{animationDirection: 'reverse', animationDuration: '12s'}}>
+                <div className="w-full h-full rounded-full border-2 border-foreground/40 shadow-[0_0_20px_rgba(255,255,255,0.3)]"></div>
+              </div>
+              
               {/* Main profile image */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-large border-4 border-primary/20 group-hover:border-primary/40 transition-all duration-500">
                 <img 
