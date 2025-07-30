@@ -99,12 +99,12 @@ const Hero = () => {
           <div className="flex-shrink-0 animate-scale-in" style={{animationDelay: '0.3s'}}>
             <div className="relative group">
               {/* Rotating neon ring */}
-              <div className="absolute -inset-6 rounded-full animate-spin-slow">
+              <div className="absolute -inset-2 rounded-full animate-spin-slow">
                 <div className="w-full h-full rounded-full border-4 border-transparent bg-gradient-to-r from-foreground via-transparent to-foreground bg-clip-border shadow-glow opacity-60"></div>
               </div>
               
               {/* Second rotating ring for enhanced effect */}
-              <div className="absolute -inset-4 rounded-full animate-spin-slow" style={{animationDirection: 'reverse', animationDuration: '12s'}}>
+              <div className="absolute -inset-1 rounded-full animate-spin-slow" style={{animationDirection: 'reverse', animationDuration: '12s'}}>
                 <div className="w-full h-full rounded-full border-2 border-foreground/40 shadow-[0_0_20px_rgba(255,255,255,0.3)]"></div>
               </div>
               
@@ -125,12 +125,6 @@ const Hero = () => {
               </div>
               <div className="absolute -bottom-6 -left-6 glass-card px-6 py-3 rounded-full animate-float shadow-medium group-hover:shadow-large transition-all duration-300" style={{animationDelay: '1.5s'}}>
                 <span className="text-sm font-bold text-accent bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">PYTHON</span>
-              </div>
-              <div className="absolute top-1/2 -left-8 glass-card px-4 py-2 rounded-full animate-float shadow-medium transition-all duration-300" style={{animationDelay: '2.5s'}}>
-                <span className="text-xs font-medium text-foreground">DATA</span>
-              </div>
-              <div className="absolute top-1/4 -right-8 glass-card px-4 py-2 rounded-full animate-float shadow-medium transition-all duration-300" style={{animationDelay: '3s'}}>
-                <span className="text-xs font-medium text-foreground">CODE</span>
               </div>
             </div>
           </div>
