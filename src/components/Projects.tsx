@@ -11,6 +11,7 @@ const Projects = () => {
       technologies: ["Django", "Python", "PostgreSQL", "HTML/CSS", "JavaScript", "Bootstrap"],
       category: "Web Development",
       status: "Completed",
+      github: "https://github.com/mahendra-135/social_media_website",
       features: [
         "Secure user authentication & authorization",
         "Post creation with image uploads",
@@ -100,7 +101,13 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3 pt-4">
-                  <Button variant="gradient" size="sm" className="flex-1">
+                  <Button 
+                    variant="gradient" 
+                    size="sm" 
+                    className="flex-1"
+                    onClick={() => project.github && window.open(project.github, '_blank')}
+                    disabled={!project.github}
+                  >
                     <Github className="w-4 h-4" />
                     View Code
                   </Button>
