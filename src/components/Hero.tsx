@@ -48,7 +48,7 @@ const Hero = () => {
                 size="xl"
                 onClick={() => {
                   // Direct view link for Google Drive file
-                  const resumeUrl = 'https://drive.google.com/file/d/1oW23oNVWDapJ0-pqZYzOKdYX3JCcvRt-/view?usp=sharing';
+                  const resumeUrl = 'https://drive.google.com/file/d/1ZTUKTcS714HRa97HaCrxB38XHVWRYsp9/view?usp=drivesdk';
                   window.open(resumeUrl, '_blank');
                 }}
               >
