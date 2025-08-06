@@ -62,7 +62,7 @@ const Navigation = () => {
             <Button 
               variant="gradient" 
               size="sm"
-              onClick={() => window.open('https://drive.google.com/file/d/1oW23oNVWDapJ0-pqZYzOKdYX3JCcvRt-/view?usp=sharing', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1ZTUKTcS714HRa97HaCrxB38XHVWRYsp9/view?usp=drivesdk', '_blank')}
             >
               <Download className="w-4 h-4" />
               Resume
@@ -98,7 +98,7 @@ const Navigation = () => {
                   variant="gradient" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://drive.google.com/file/d/1oW23oNVWDapJ0-pqZYzOKdYX3JCcvRt-/view?usp=sharing', '_blank')}
+                  onClick={() => window.open('https://drive.google.com/file/d/1ZTUKTcS714HRa97HaCrxB38XHVWRYsp9/view?usp=drivesdk', '_blank')}
                 >
                   <Download className="w-4 h-4" />
                   Download Resume
