@@ -62,7 +62,14 @@ const Navigation = () => {
             <Button 
               variant="gradient" 
               size="sm"
-              onClick={() => window.open('https://drive.google.com/file/d/1ZTUKTcS714HRa97HaCrxB38XHVWRYsp9/view?usp=drivesdk', '_blank')}
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Mahiresume.pdf';
+                link.download = 'Mahendra_Reddy_Resume.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             >
               <Download className="w-4 h-4" />
               Resume
@@ -98,7 +105,14 @@ const Navigation = () => {
                   variant="gradient" 
                   size="sm" 
                   className="w-full"
-                  onClick={() => window.open('https://drive.google.com/file/d/1ZTUKTcS714HRa97HaCrxB38XHVWRYsp9/view?usp=drivesdk', '_blank')}
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/Mahiresume.pdf';
+                    link.download = 'Mahendra_Reddy_Resume.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
                 >
                   <Download className="w-4 h-4" />
                   Download Resume

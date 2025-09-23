@@ -47,9 +47,12 @@ const Hero = () => {
                 variant="glass" 
                 size="xl"
                 onClick={() => {
-                  // Direct view link for Google Drive file
-                  const resumeUrl = "https://drive.google.com/file/d/1ZTUKTcS714HRa97HaCrxB38XHVWRYsp9/view?usp=drivesdk";
-                  window.open(resumeUrl, '_blank');
+                  const link = document.createElement('a');
+                  link.href = '/Mahiresume.pdf';
+                  link.download = 'Mahendra_Reddy_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
                 }}
               >
                 <Download className="w-5 h-5" />
