@@ -83,7 +83,7 @@ const Hero = () => {
                 variant="ghost" 
                 size="icon" 
                 className="rounded-full hover:scale-110 transition-transform"
-                onClick={() => window.open('https://linkedin.com/in/-mahendra', '_blank')}
+                onClick={() => window.open('https://www.linkedin.com/in/-mahendra', '_blank')}
               >
                 <Linkedin className="w-5 h-5" />
               </Button>
