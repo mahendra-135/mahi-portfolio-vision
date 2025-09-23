@@ -24,10 +24,10 @@ const Hero = () => {
               
               <div className="space-y-2">
                 <h2 className="text-xl lg:text-2xl text-accent font-semibold">
-                  AI & ML Enthusiast | Python Developer
+                  Computer Science Graduate | AI & ML Specialist
                 </h2>
                 <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl">
-                  "Solving real-world problems through AI, data, and clean code."
+                  "Aspiring Computer Science graduate specialized in AI and ML. Skilled in Python, Django, JavaScript, and full-stack development with hands-on experience in scalable systems, computer vision, and data analysis."
                 </p>
               </div>
             </div>
@@ -83,7 +83,7 @@ const Hero = () => {
                 variant="ghost" 
                 size="icon" 
                 className="rounded-full hover:scale-110 transition-transform"
-                onClick={() => window.open('https://www.linkedin.com/in/mandireddy-mahendra-reddy', '_blank')}
+                onClick={() => window.open('https://linkedin.com/in/-mahendra', '_blank')}
               >
                 <Linkedin className="w-5 h-5" />
               </Button>
