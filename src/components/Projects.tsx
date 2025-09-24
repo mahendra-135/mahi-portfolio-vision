@@ -37,31 +37,37 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-secondary">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+    <section id="projects" className="py-24 bg-gradient-secondary section-container">
+      <div className="container mx-auto px-4 section-content">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-3 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-6">
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+            <span className="text-sm font-medium text-accent">My Work</span>
+          </div>
+          
+          <h2 className="text-4xl lg:text-6xl xl:text-7xl font-bold mb-8">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my technical skills and problem-solving abilities through real-world applications
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A showcase of my technical expertise and problem-solving abilities through 
+            real-world applications that demonstrate innovation and impact.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-7xl mx-auto mb-16">
           {projects.map((project, index) => (
-            <Card key={project.title} className="glass-card hover-lift group animate-fade-in" style={{animationDelay: `${index * 0.2}s`}}>
-              <CardHeader className="pb-4">
-                <div className="flex items-start justify-between gap-4">
+            <Card key={project.title} className="premium-card hover-lift group animate-fade-in" style={{animationDelay: `${index * 0.3}s`}}>
+              <CardHeader className="pb-6">
+                <div className="flex items-start justify-between gap-6">
                   <div className="flex-1">
-                    <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <CardTitle className="text-3xl font-bold text-foreground group-hover:gradient-text transition-all duration-500 mb-4">
                       {project.title}
                     </CardTitle>
-                    <div className="flex items-center gap-2 mt-2">
-                      <Badge variant="default" className="bg-gradient-primary">
+                    <div className="flex items-center gap-3">
+                      <Badge variant="default" className="bg-gradient-primary text-white font-semibold px-4 py-1">
                         {project.category}
                       </Badge>
-                      <Badge variant="outline" className="text-accent border-accent">
+                      <Badge variant="outline" className="text-accent border-accent/30 bg-accent/10 font-medium">
                         {project.status}
                       </Badge>
                     </div>
@@ -69,50 +75,50 @@ const Projects = () => {
                 </div>
               </CardHeader>
               
-              <CardContent className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
+              <CardContent className="space-y-8">
+                <p className="text-muted-foreground leading-relaxed text-lg">
                   {project.description}
                 </p>
 
-                {/* Key Features */}
+                {/* Enhanced Key Features */}
                 <div>
-                  <h4 className="font-semibold text-foreground mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
+                  <h4 className="font-bold text-foreground mb-4 text-lg">Key Features:</h4>
+                  <ul className="space-y-3">
                     {project.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                        {feature}
+                      <li key={featureIndex} className="flex items-start gap-3 text-muted-foreground">
+                        <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2"></div>
+                        <span className="leading-relaxed">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                {/* Technologies */}
+                {/* Enhanced Technologies */}
                 <div>
-                  <h4 className="font-semibold text-foreground mb-3">Technologies Used:</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="font-bold text-foreground mb-4 text-lg">Technologies:</h4>
+                  <div className="flex flex-wrap gap-3">
                     {project.technologies.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
+                      <Badge key={tech} variant="secondary" className="text-sm px-3 py-1 bg-card/60 hover:bg-primary/10 hover:border-primary/30 transition-all duration-300">
                         {tech}
                       </Badge>
                     ))}
                   </div>
                 </div>
 
-                {/* Action Buttons */}
-                <div className="flex gap-3 pt-4">
+                {/* Enhanced Action Buttons */}
+                <div className="flex gap-4 pt-6">
                   <Button 
                     variant="gradient" 
-                    size="sm" 
-                    className="flex-1"
+                    size="lg" 
+                    className="flex-1 glow-button"
                     onClick={() => project.github && window.open(project.github, '_blank')}
                     disabled={!project.github}
                   >
-                    <Github className="w-4 h-4" />
-                    View Code
+                    <Github className="w-5 h-5" />
+                    View Source
                   </Button>
-                  <Button variant="outline" size="sm" className="flex-1">
-                    <ExternalLink className="w-4 h-4" />
+                  <Button variant="outline" size="lg" className="flex-1 border-accent/30 hover:border-accent hover:bg-accent/10">
+                    <ExternalLink className="w-5 h-5" />
                     Live Demo
                   </Button>
                 </div>
@@ -121,11 +127,20 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-12">
-          <Button variant="hero" size="xl">
-            <Globe className="w-5 h-5" />
-            View All Projects
+        {/* Enhanced Call to Action */}
+        <div className="text-center">
+          <div className="max-w-2xl mx-auto mb-8">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Want to see more of my work?
+            </h3>
+            <p className="text-muted-foreground">
+              Explore my complete portfolio on GitHub and discover additional projects, 
+              contributions, and ongoing experiments.
+            </p>
+          </div>
+          <Button variant="hero" size="xl" className="glow-button" onClick={() => window.open('https://github.com/mahendra-135', '_blank')}>
+            <Github className="w-5 h-5" />
+            Visit My GitHub
           </Button>
         </div>
       </div>
