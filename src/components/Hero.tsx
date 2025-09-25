@@ -149,9 +149,6 @@ const Hero = () => {
                 </div>
               </div>
               
-              <div className="absolute top-1/2 -left-12 premium-card px-4 py-3 rounded-xl float-gentle shadow-premium group-hover:shadow-glow transition-all duration-500" style={{animationDelay: '3s'}}>
-                <span className="text-xs font-bold text-muted-foreground">DATA SCIENCE</span>
-              </div>
             </div>
           </div>
         </div>
