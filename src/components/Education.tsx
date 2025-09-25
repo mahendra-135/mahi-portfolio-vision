@@ -8,21 +8,18 @@ const Education = () => {
       degree: "B.Tech – Artificial Intelligence & Machine Learning",
       institution: "Universal College of Engineering and Technology",
       period: "2021 – 2025",
-      grade: "CGPA: 7.16",
       status: "completed"
     },
     {
       degree: "Intermediate",
       institution: "Oxford Junior College",
       period: "2019 – 2021",
-      grade: "CGPA: 6.4",
       status: "completed"
     },
     {
       degree: "SSC",
       institution: "Swami School",
       period: "2018 – 2019",
-      grade: "CGPA: 8.7",
       status: "completed"
     }
   ];
@@ -70,12 +67,6 @@ const Education = () => {
                   </div>
                   
                   <div className="flex flex-col items-end gap-2">
-                    <Badge 
-                      variant={item.status === 'current' ? 'default' : 'secondary'}
-                      className="font-medium"
-                    >
-                      {item.grade}
-                    </Badge>
                     {item.status === 'current' && (
                       <Badge variant="outline" className="text-primary border-primary">
                         In Progress
