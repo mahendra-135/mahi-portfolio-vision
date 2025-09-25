@@ -22,7 +22,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "https://www.linkedin.com/in/-mahendra",
+      value: "linkedin.com/in/-mahendra",
       href: "https://www.linkedin.com/in/-mahendra"
     }
   ];
