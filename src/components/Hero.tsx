@@ -129,7 +129,7 @@ const Hero = () => {
                 <img 
                   src={profileImage} 
                   alt="Mahendra Reddy Mandireddy - AI & ML Specialist"
-                  className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-1000"
+                  className="w-full h-full object-cover object-[center_20%] transform group-hover:scale-105 transition-transform duration-1000"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
               </div>
