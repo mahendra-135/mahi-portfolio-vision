@@ -172,13 +172,6 @@ const Hero = () => {
                 </div>
               </div>
               
-              {/* Additional floating tag */}
-              <div className="absolute top-1/2 -right-20 premium-card px-4 py-3 rounded-xl float-gentle shadow-premium group-hover:shadow-glow group-hover:scale-105 transition-all duration-500 hover-lift" style={{animationDelay: '4s'}}>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-primary-glow rounded-full animate-pulse"></div>
-                  <span className="text-xs font-semibold gradient-text">DJANGO</span>
-                </div>
-              </div>
               
               {/* Floating particles */}
               <div className="absolute inset-0 pointer-events-none">
