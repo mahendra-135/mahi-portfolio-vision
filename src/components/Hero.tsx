@@ -158,6 +158,7 @@ const Hero = () => {
               {/* Enhanced floating skills tags with more effects */}
               <div className="absolute -top-12 -right-12 premium-card px-6 py-4 rounded-2xl float-gentle shadow-premium group-hover:shadow-glow group-hover:-translate-y-2 group-hover:scale-110 transition-all duration-500 hover-lift">
                 <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-primary rounded-full animate-pulse shadow-glow"></div>
                   <span className="text-sm font-bold gradient-text">AI & ML</span>
                   <div className="w-2 h-2 bg-accent/60 rounded-full animate-ping"></div>
                 </div>
